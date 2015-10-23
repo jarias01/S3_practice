@@ -1,0 +1,34 @@
+<head>
+  <title>First practice</title>
+</head>
+
+<body>
+  <h1>This is the first practice with meteor and the S3 service of AWS</h1>
+
+  {{> loginButtons}}
+
+  {{> upload}}
+
+  <input id="input" type="file" accept="image/*">
+
+  {{> MyPicture}}
+
+</body>
+
+<template name="upload">
+  <div>
+    <button type="button" class="btn btn-primary">Upload</button>
+  </div>
+</template>
+
+<template name="MyPicture">
+  <img src={{url}}/>
+</template>
+
+<template name="progressBar">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+      <span class="sr-only">{{progress}}% Complete</span>
+    </div>
+  </div>
+</template>
